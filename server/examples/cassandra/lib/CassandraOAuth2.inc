@@ -7,8 +7,8 @@ define("CASSANDRA_SERVER", "127.0.0.1:9160");
 define("CASSANDRA_KEYSPACE", "Keyspace1");
 define("CASSANDRA_CF", "oauth");
 
-require_once dirname(__file__) . '/' . PHPCASSA_VERSION . '/connection.php';
-require_once dirname(__file__) . '/' . PHPCASSA_VERSION . '/columnfamily.php';
+require_once dirname(__file__) . '/phpcassa-' . PHPCASSA_VERSION . '/connection.php';
+require_once dirname(__file__) . '/phpcassa-' . PHPCASSA_VERSION . '/columnfamily.php';
 require_once dirname(__file__) . '/../../../lib/oauth.php';
 
 /**
