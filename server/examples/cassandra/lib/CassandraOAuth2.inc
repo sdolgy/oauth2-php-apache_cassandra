@@ -9,7 +9,7 @@ define("CASSANDRA_CF", "oauth");
 
 require_once dirname(__file__) . '/phpcassa-' . PHPCASSA_VERSION . '/connection.php';
 require_once dirname(__file__) . '/phpcassa-' . PHPCASSA_VERSION . '/columnfamily.php';
-require_once dirname(__file__) . '/../../../lib/oauth.php';
+require_once dirname(__file__) . '/../../../../lib/OAuth2.inc';
 
 /**
  * Sample OAuth2 Library Apache Cassandra Implementation.
