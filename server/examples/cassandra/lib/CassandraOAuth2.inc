@@ -42,7 +42,7 @@ class CassandraOAuth2 extends OAuth2 {
 	 *   Redirect URI to be stored.
 	 */
 	public function addClient($client_id, $client_secret, $redirect_uri) {
-		$this->db->set('clients', array($client_id => json_encode(array('client_secret' => $client_secret, 'redirect_uri' => $redirect_uri))));
+		$this->db->insert('clients', array($client_id => json_encode(array('client_secret' => $client_secret, 'redirect_uri' => $redirect_uri))));
 	}
 
 	/**
@@ -102,7 +102,7 @@ class CassandraOAuth2 extends OAuth2 {
 	 */
 	protected function setAccessToken($oauth_token, $client_id, $expires, $scope = NULL) {
 		try {
-			$client = $this->db->set('tokens', array($oauth_token => json_encode(array('client_id' => $client_id, 'expires' => $expires, 'scope' => $scope))));
+			$client = $this->db->insert('tokens', array($oauth_token => json_encode(array('client_id' => $client_id, 'expires' => $expires, 'scope' => $scope))));
 		} catch (Exception $e) {
 			return FALSE;
 		}		
@@ -133,7 +133,7 @@ class CassandraOAuth2 extends OAuth2 {
 	 */
 	protected function setAuthCode($code, $client_id, $redirect_uri, $expires, $scope = NULL) {
 		try { 
-			$this->db->set('auth_codes', array($code => json_encode(array('client_id' => $client_id, 'redirect_uri' => $redirect_uri, 'expires' => $expires, 'scope' => $scope))));
+			$this->db->insert('auth_codes', array($code => json_encode(array('client_id' => $client_id, 'redirect_uri' => $redirect_uri, 'expires' => $expires, 'scope' => $scope))));
 		} catch (Exception $e) {
 			return FALSE;
 		}
