@@ -1,0 +1,8 @@
+
+The code from here has been obtained from:  http://code.google.com/p/oauth2-php/
+
+My endeavours are to modify it to support Apache Cassandra ( http://cassandra.apache.org/ ) leveraging 
+PHPCassa: https://github.com/thobbs/phpcassa
+
+-sd
+http://twitter.com/sdolgy
