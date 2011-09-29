@@ -1,8 +1,8 @@
 
-The code from here has been obtained from:  http://code.google.com/p/oauth2-php/
-
-My endeavours are to modify it to support Apache Cassandra ( http://cassandra.apache.org/ ) leveraging 
-PHPCassa: https://github.com/thobbs/phpcassa
+1.  The original code for this has been obtained from:  http://code.google.com/p/oauth2-php/ ( September 29 / 2011 )
+2.  The original code _did not_ contain support for Apache Cassandra ( http://cassandra.apache.org/ ) 
+3.  Adding support through PHPCassa: https://github.com/thobbs/phpcassa to Cassandra
+4.  At some point, will review and update to http://tools.ietf.org/html/draft-ietf-oauth-v2-22 as the original code is on v2-10
 
 -sd
 http://twitter.com/sdolgy
